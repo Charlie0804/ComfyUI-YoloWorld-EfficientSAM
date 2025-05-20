@@ -11,7 +11,7 @@ from inference.models import YOLOWorld
 from .utils.efficient_sam import load, inference_with_boxes
 from .utils.video import generate_file_name, calculate_end_frame_index, create_directory
 
-current_directory = os.getenv("COMFY_MODELS_DIR", None)
+current_directory = folder_paths.models_dir
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 BOUNDING_BOX_ANNOTATOR = sv.BoundingBoxAnnotator()
